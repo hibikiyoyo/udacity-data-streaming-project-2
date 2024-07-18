@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, to_json, col, unbase64, base64, split, expr
-from pyspark.sql.types import StructField, StructType, StringType, BooleanType, ArrayType, DateType
+from pyspark.sql.types import StructField, StructType, StringType, BooleanType, ArrayType, DateType, FloatType
 
 # TO-DO: create a StructType for the Kafka redis-server topic which has all changes made to Redis - before Spark 3.0.0, schema inference is not automatic
 kafkaRedisSchema = StructType (
@@ -35,7 +35,7 @@ stediEventSchema = StructType([
 ])
 
 #TO-DO: create a spark application object
-spark = SparkSession.builder.appName("spark-py-kafka-join").getOrCreate()
+spark = SparkSession.builder.appName("spark-py-redis").getOrCreate()
 #TO-DO: set the spark log level to WARN
 spark.sparkContext.setLogLevel("WARN")
 # TO-DO: using the spark application object, read a streaming dataframe from the Kafka topic redis-server as the source

@@ -33,11 +33,11 @@ kafkaJSONSchema = StructType (
 stediEventSchema = StructType([
     StructField("customer", StringType()),
     StructField("score", FloatType()),
-    StructField("riskDate", DateType())
+    StructField("riskDate", StringType())
 ])
 
 #TO-DO: create a spark application object
-spark = SparkSession.builder.appName("spark-py-kafka-join").getOrCreate()
+spark = SparkSession.builder.appName("spark-py-kafka-join-project2").getOrCreate()
 #TO-DO: set the spark log level to WARN
 spark.sparkContext.setLogLevel("WARN")
 # TO-DO: using the spark application object, read a streaming dataframe from the Kafka topic redis-server as the source
@@ -163,7 +163,9 @@ stediEventStreamingDF.withColumn("value", from_json("value", stediEventSchema))\
 # TO-DO: execute a sql statement against a temporary view, selecting the customer and the score from the temporary view, creating a dataframe called customerRiskStreamingDF
 customerRiskStreamingDF = spark.sql("select customer, score from CustomerRisk")
 # TO-DO: join the streaming dataframes on the email address to get the risk score and the birth year in the same dataframe
-stediDataScoreDF = customerRiskStreamingDF.join(emailAndBirthYearStreamingDF, expr("customer = email"))
+stediDataScoreDF = customerRiskStreamingDF.join(emailAndBirthYearStreamingDF, expr("""
+    email=customer
+"""))
 # TO-DO: sink the joined dataframes to a new kafka topic to send the data to the STEDI graph application 
 # +--------------------+-----+--------------------+---------+
 # |            customer|score|               email|birthYear|
@@ -177,10 +179,12 @@ stediDataScoreDF = customerRiskStreamingDF.join(emailAndBirthYearStreamingDF, ex
 # +--------------------+-----+--------------------+---------+
 #
 # In this JSON Format {"customer":"Santosh.Fibonnaci@test.com","score":"28.5","email":"Santosh.Fibonnaci@test.com","birthYear":"1963"} 
+stediDataScoreDF.writeStream.outputMode("append").format("console").start().awaitTermination()
 stediDataScoreDF.selectExpr("cast(customer as string) as key", "to_json(struct(*)) as value") \
-	.writeStream\
-	.format("kafka")\
-    .option("kafka.bootstrap.server", "localhost:9002") \
+    .writeStream\
+    .format("kafka")\
+    .option("kafka.bootstrap.servers", "localhost:9092")\
     .option("topic", "stedi-data-score")\
+    .option("checkpointLocation", "/tmp/kafkacheckpoint")\
     .start() \
     .awaitTermination()
