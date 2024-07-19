@@ -184,7 +184,7 @@ stediDataScoreDF.selectExpr("cast(customer as string) as key", "to_json(struct(*
     .writeStream\
     .format("kafka")\
     .option("kafka.bootstrap.servers", "localhost:9092")\
-    .option("topic", "stedi-data-score")\
+    .option("topic", "topic-you-created")\
     .option("checkpointLocation", "/tmp/kafkacheckpoint")\
     .start() \
     .awaitTermination()
