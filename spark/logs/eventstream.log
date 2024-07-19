@@ -1,0 +1,29 @@
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Olson@test...| 11.5|
+|  Edward.Wu@test.com|  4.0|
+|Suresh.Jones@test...| -3.5|
+|Bobby.Harris@test...|  2.0|
+|Christina.Hansen@...| -8.0|
+|Bobby.Clayton@tes...| -3.0|
+|David.Jones@test.com| -3.5|
+|Sarah.Jones@test.com| -1.0|
+|Larry.Anderson@te...| -4.5|
+| Lyn.Hansen@test.com| -1.5|
+|Craig.Jones@test.com| -5.0|
+|Bobby.Davis@test.com| -3.0|
+|Edward.Doshi@test...| -1.0|
+|Lyn.Staples@test.com| -4.5|
+|  Ben.Abram@test.com| -2.0|
+|Jason.Doshi@test.com| -1.5|
+|Suresh.Sanchez@te...| 10.0|
+|Edward.Anandh@tes...| 13.5|
+|  John.Huey@test.com|  1.0|
+|Bobby.Jefferson@t...|  2.0|
++--------------------+-----+
+only showing top 20 rows
+

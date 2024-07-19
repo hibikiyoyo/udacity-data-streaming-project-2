@@ -1,0 +1,58 @@
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|            customer|score|               email|birthYear|
++--------------------+-----+--------------------+---------+
+|Bobby.Jefferson@t...|  2.0|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...|-16.5|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...| -2.5|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...| 28.0|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...| 27.5|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...| -4.5|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...|-18.0|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...|  5.5|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...|  3.0|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...|  0.5|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...|-17.0|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...| -6.5|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...| 31.5|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...|  6.0|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...|  1.0|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...| 23.5|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...|-12.5|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...|-39.0|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...|  5.5|Bobby.Jefferson@t...|     1946|
+|Bobby.Jefferson@t...| 14.0|Bobby.Jefferson@t...|     1946|
++--------------------+-----+--------------------+---------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|            customer|score|               email|birthYear|
++--------------------+-----+--------------------+---------+
+|Ashley.Abram@test...| 21.5|Ashley.Abram@test...|     1961|
+|Ashley.Abram@test...| -3.5|Ashley.Abram@test...|     1961|
+|Ashley.Abram@test...|-18.0|Ashley.Abram@test...|     1961|
+|Ashley.Abram@test...| -4.0|Ashley.Abram@test...|     1961|
+|Neeraj.Hansen@tes...| -2.0|Neeraj.Hansen@tes...|     1953|
+|Neeraj.Hansen@tes...| -3.0|Neeraj.Hansen@tes...|     1953|
+|Neeraj.Hansen@tes...| -3.5|Neeraj.Hansen@tes...|     1953|
+|Neeraj.Hansen@tes...| -2.0|Neeraj.Hansen@tes...|     1953|
+|Eric.Anandh@test.com| -5.0|Eric.Anandh@test.com|     1960|
+|Eric.Anandh@test.com| -4.0|Eric.Anandh@test.com|     1960|
+|Eric.Anandh@test.com| -3.0|Eric.Anandh@test.com|     1960|
+|Eric.Anandh@test.com| -3.0|Eric.Anandh@test.com|     1960|
+|    Sean.Wu@test.com| -6.0|    Sean.Wu@test.com|     1964|
+|    Sean.Wu@test.com| -3.0|    Sean.Wu@test.com|     1964|
+|    Sean.Wu@test.com| 21.5|    Sean.Wu@test.com|     1964|
+|Sarah.Olson@test.com| -4.0|Sarah.Olson@test.com|     1951|
+|Lyn.Sanchez@test.com|-13.5|Lyn.Sanchez@test.com|     1947|
+|Sarah.Olson@test.com| -3.5|Sarah.Olson@test.com|     1951|
+|Lyn.Sanchez@test.com| 25.0|Lyn.Sanchez@test.com|     1947|
+|Sarah.Olson@test.com| -3.5|Sarah.Olson@test.com|     1951|
++--------------------+-----+--------------------+---------+
+only showing top 20 rows
+
